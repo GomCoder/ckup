@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/* 최근게시물 스킨 (latest) */
+
+.basic_lt {padding-top: 40px;}
+.basic_lt ul {display: flex; flex-direction: column; gap:20px;}
+.basic_lt a {padding:20px 40px; display: flex; font-size:1.8rem; justify-content: space-between; align-items: flex-end; box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.04); transition: all 0.3s;}
+.basic_lt a span { overflow: hidden; word-wrap: break-word; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;}
+.basic_lt a .ttl {width:calc(100% - 90px); padding-right:20px;}
+.basic_lt a .date {font-size: 1.6rem; display: inline-block; width:90px;}
+.basic_lt a:hover {color:#fff; background-color: var(--main-color);}
+
+.empty_li {font-size: 1.8rem; color:#ddd;}
+
+@media all and (max-width:1280px) {
+.basic_lt a {padding:20px;}
+}
+
+@media all and (max-width:767px) {
+.basic_lt a {padding:20px 10px;}
+.basic_lt a .date {width:80px;} 
+}
