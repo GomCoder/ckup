@@ -311,7 +311,7 @@
 #bo_vc_sns input {margin:0 5px 0 0}
 
 /* 게시판 쓰기 */
-#bo_w {padding:15px}
+#bo_w {padding-top: 150px}
 #bo_w .bo_v_option li {display:inline-block;float:left;margin:0 5px 0 0}
 #bo_w .bo_v_option li label {vertical-align:baseline}
 #bo_w .bo_v_option:after {display:block;visibility:hidden;clear:both;content:""}

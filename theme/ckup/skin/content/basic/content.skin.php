@@ -1,17 +1,49 @@
 <?php
-if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
-
-// add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
-add_stylesheet('<link rel="stylesheet" href="'.$content_skin_url.'/style.css">', 0);
+include_once('../common.php');
+include_once(G5_THEME_MOBILE_PATH.'/head.php');
 ?>
 
-<article id="ctt" class="ctt_<?php echo $co_id; ?>">
-    <header>
-        <h1><?php echo $g5['title']; ?></h1>
-    </header>
-
-    <div id="ctt_con">
-        <?php echo $str; ?>
+<div class="sub_inner sub_company">
+    <div class="sub_wrap">
+        <div class="sub_lnb">
+            <div class="sub_lnb_box">
+                <h2>회사소개</h2>
+                <ul>
+                    <li class="active">
+                        <a href="<?php echo G5_URL ?>/page/company.php">회사소개</a>    
+                    </li>
+                    <li>
+                        <a href="<?php echo G5_URL ?>/page/company.php">개인정보 처리방침</a>    
+                    </li>
+                    <li>
+                        <a href="<?php echo G5_URL ?>/page/company.php">서비스 이용약관</a>    
+                    </li>                
+                </ul>
+            </div>
+        </div>
+        <div class="sub_contain">
+            <div class="contain_box">
+                <div class="ttl_box">
+                    <h3>회사소개</h3>
+                </div>
+                <div class="info_box">
+                    <img src="<?php echo G5_THEME_URL ?>/img/sub/company_img01.JPG" alt="">								
+                    <img src="<?php echo G5_THEME_URL ?>/img/sub/company_img02.JPG" alt="">								
+                    <img src="<?php echo G5_THEME_URL ?>/img/sub/company_img03.JPG" alt="">								
+                    <img src="<?php echo G5_THEME_URL ?>/img/sub/company_img04.JPG" alt="">								
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
-</article>
+
+
+
+
+
+
+
+<?php
+include_once(G5_THEME_MOBILE_PATH.'/tail.php');
+?>

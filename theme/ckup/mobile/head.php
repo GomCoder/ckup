@@ -1,3 +1,4 @@
+<!-- 모바일_상단_메뉴 -->
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
@@ -33,26 +34,36 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <nav class="gnb">
           <ul>
             <li>
-              <a href="<?php echo G5_URL ?>/page/company.php">
+              <a href="<?php echo G5_URL ?>/bbs/content.php?co_id=company">
                 회사소개
               </a>
             </li>
             <li>
-              <a href="<?php echo G5_URL ?>/page/guide01.php">
-                이용안내
-              </a>
-            </li>
-            <li>
-              <a href="<?php echo G5_URL ?>/bbs/board.php?bo_table=notice">
-                이용후기
-              </a>
-              <ul class="sub_gnb">
-                <li><a href="<?php echo G5_URL ?>/bbs/board.php?bo_table=notice">이용후기</a></li>
-                <li><a href="">자주묻는 질문</a></li>
+            <a href="<?php echo G5_URL ?>/bbs/content.php?co_id=how_to_shipping">
+                  이용안내
+                  </a>
+            <ul class="sub_gnb">
+              <li><a href="<?php echo G5_URL ?>/bbs/content.php?co_id=how_to_shipping">
+                  이용안내
+                  </a>
+              </li>
+              <li><a href="<?php echo G5_URL ?>/bbs/content.php?co_id=how_to_shipping">
+                  공지사항
+                  </a>
+              </li>
               </ul>
             </li>
             <li>
-              <a href="">
+              <a href="<?php echo G5_URL ?>/bbs/board.php?bo_table=free">
+                이용후기
+              </a>
+              <ul class="sub_gnb">
+                <li><a href="<?php echo G5_URL ?>/bbs/board.php?bo_table=free">이용후기</a></li>
+                <li><a href="<?php echo G5_URL ?>/bbs/board.php?bo_table=qa">자주묻는 질문</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="<?php echo G5_URL ?>/bbs/content.php?co_id=mypage">
                 마이페이지
               </a>
             </li>
@@ -63,7 +74,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
               <li class="login_li"><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
               <?php }  ?>
           </ul>
-        </nav>
+        </nav>        
+
         <div class="m_btn_box pointer">
           <div class="grid_item__inner">
             <input id="ham_btn" type="checkbox" style="display: none">
@@ -83,33 +95,33 @@ $current_page = basename($_SERVER['PHP_SELF']);
       <div class="main_wrap">
         <nav class="gnb02">
           <ul>
-            <li class="<?php echo ($current_page == 'form01.php') ? 'active' : ''; ?>">
-              <a href="<?php echo G5_URL ?>/page/form01.php">
+            <li class="<?php echo ($current_page == 'write.php' && $_GET['bo_table'] == 'shipping_req') ? 'active' : ''; ?>">
+              <a href="<?php echo G5_URL ?>/bbs/write.php?bo_table=shipping_req">
                 배송대행신청
               </a>
             </li>
-            <li class="<?php echo ($current_page == 'form02.php') ? 'active' : ''; ?>">
-              <a href="<?php echo G5_URL ?>/page/form02.php">
+            <li class="<?php echo ($current_page == 'write.php' && $_GET['bo_table'] == 'buying_req') ? 'active' : ''; ?>">
+              <a href="<?php echo G5_URL ?>/bbs/write.php?bo_table=buying_req">
                 구매대행신청
               </a>
             </li>
-            <li class="<?php echo ($current_page == 'form03.php') ? 'active' : ''; ?>">
-              <a href="<?php echo G5_URL ?>/page/form03.php">
+            <li class="<?php echo ($current_page == 'write.php' && $_GET['bo_table'] == 'fcl_req') ? 'active' : ''; ?>">
+              <a href="<?php echo G5_URL ?>/bbs/write.php?bo_table=fcl_req">
                 FCL신청
               </a>
             </li>
-            <li class="<?php echo ($current_page == 'write.php' && $_GET['bo_table'] == 'payment') ? 'active' : ''; ?>">
-              <a href="<?php echo G5_URL ?>/bbs/write.php?bo_table=payment">
+            <li class="<?php echo ($current_page == 'write.php' && $_GET['bo_table'] == 'payment_req') ? 'active' : ''; ?>">
+              <a href="<?php echo G5_URL ?>/bbs/write.php?bo_table=payment_req">
                 결제대행신청
               </a>
             </li>
-            <li class="<?php echo ($current_page == 'board.php' && $_GET['bo_table'] == 'market') ? 'active' : ''; ?>">
-              <a href="<?php echo G5_URL ?>/bbs/board.php?bo_table=market">
+            <li class="<?php echo ($current_page == 'write.php' && $_GET['bo_table'] == 'market_req') ? 'active' : ''; ?>">
+              <a href="<?php echo G5_URL ?>/bbs/write.php?bo_table=market_req">
                 시장조사신청
               </a>
             </li> 
-            <li class="<?php echo ($current_page == 'board.php' && $_GET['bo_table'] == 'express') ? 'active' : ''; ?>">
-              <a href="<?php echo G5_URL ?>/bbs/board.php?bo_table=express">
+            <li class="<?php echo ($current_page == 'write.php' && $_GET['bo_table'] == 'express_req') ? 'active' : ''; ?>">
+              <a href="<?php echo G5_URL ?>/bbs/write.php?bo_table=express_req">
                 특송화물신청
               </a>
             </li>
@@ -224,21 +236,21 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <div class="mo_menu">
           <ul class="menu">
             <li>
-              <a href="" ><span>회사소개</span></a>
+              <a href="<?php echo G5_URL ?>/bbs/content.php?co_id=company" ><span>회사소개</span></a>
               <div class="plus">
                 <div></div>
                 <div></div>
               </div>
             </li>
             <li>
-              <a href="" ><span>이용안내</span></a>
+              <a href="<?php echo G5_URL ?>/bbs/content.php?co_id=how_to_shipping" ><span>이용안내</span></a>
             </li>
             <li class="depth1">
               <a href="" ><span>고객센터</span></a>
               <div class="depth2">
                 <ul class="clear">
                   <li><a href="<?php echo G5_URL ?>/bbs/board.php?bo_table=notice">공지사항</a></li>
-                  <li><a href="<?php echo G5_URL ?>/bbs/board.php?bo_table=qna">자주묻는 질문</a></li>
+                  <li><a href="<?php echo G5_URL ?>/bbs/board.php?bo_table=qa">자주묻는 질문</a></li>
                 </ul>
               </div>
               <div class="plus">
@@ -247,7 +259,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
               </div>
             </li>
             <li>
-              <a href="" ><span>마이페이지</span></a>
+              <a href="<?php echo G5_URL ?>/bbs/content.php?co_id=mypage" ><span>마이페이지</span></a>
             </li>
           </ul>
 
